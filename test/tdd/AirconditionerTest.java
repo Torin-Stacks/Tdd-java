@@ -14,7 +14,7 @@ class AirconditionerTest {
         samsung.isOn();
         samsung.toggleOn();
         //assert
-        assertTrue(true);
+        assertTrue(samsung.isOn());
     }
 
     @Test
@@ -22,11 +22,11 @@ class AirconditionerTest {
         //given
         Airconditioner samsung = new Airconditioner();
         //when
-        samsung.isOn();
-        samsung.toggleOn();
-        samsung.toggleOn();
+         samsung.isOn();
+         samsung.toggleOn();
+         samsung.toggleOn();
         //assert
-        assertFalse(false);
+        assertFalse(samsung.isOn());
     }
 
     @Test

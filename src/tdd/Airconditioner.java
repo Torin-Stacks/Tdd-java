@@ -7,9 +7,11 @@ public class Airconditioner {
 
 
     public void toggleOn() {
-        if(isOn) isOn = true;
 
+        if(isOn == false) isOn = true;
+        else isOn = false;
     }
+
 
     public boolean isOn() {
         return isOn;
