@@ -24,10 +24,10 @@ public class Television {
         return televisionIsOn;
     }
 
-    public void setChannelNumber(int channelNo) {
-        this.channelNumber = channelNo;
 
-    }
+   public void setChannelNumber(int channelNumber) {
+       this.channelNumber = channelNumber;
+   }
 
 
     public int getChannelNumber() {
@@ -35,7 +35,7 @@ public class Television {
     }
 
 
-    public void pastChannel() {
+    public void previousChannel() {
         channelNumber = channelNumber - 1;
     }
 

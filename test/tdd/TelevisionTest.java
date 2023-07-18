@@ -2,6 +2,7 @@ package tdd;
 
 import org.junit.jupiter.api.Test;
 
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TelevisionTest {
@@ -25,7 +26,6 @@ class TelevisionTest {
    @Test
 
     public void channelChangeTest(){
-        Television tv1 = new Television();
         tv.setChannelNumber(20);
         assertEquals(20, tv.getChannelNumber());
     }
@@ -35,7 +35,7 @@ class TelevisionTest {
 
     public void pastChannelTest(){
         tv.setChannelNumber(20);
-        tv.pastChannel();
+        tv.previousChannel();
         assertEquals(19, tv.getChannelNumber());
     }
 

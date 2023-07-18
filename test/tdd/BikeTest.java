@@ -12,7 +12,7 @@ class BikeTest {
         Bike honda = new Bike();
         honda.isOn();
         honda.ignition();
-        assertTrue(true);
+        assertTrue(honda.isOn());
     }
 
     @Test
@@ -21,7 +21,7 @@ class BikeTest {
         honda.isOn();
         honda.ignition();
         honda.ignition();
-        assertFalse(false);
+        assertFalse(honda.isOn());
     }
 
     @Test

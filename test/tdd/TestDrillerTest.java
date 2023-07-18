@@ -52,7 +52,7 @@ class TestDrillerTest {
     public void calculateAmountToPayFor200_499Test(){
         TestDriller app = new TestDriller();
         app.amountToPay(499);
-        assertEquals((499* 1100),app.returnAmount());
+        assertEquals((499 * 1100),app.returnAmount());
     }
 
     @Test

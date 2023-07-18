@@ -30,137 +30,11 @@ public class Nokia {
 
         switch (number) {
             case 1:
-                System.out.println("press 1 for search");
-                System.out.println("press 2 for service no");
-                System.out.println("press 3 for add name");
-                System.out.println("press 4 for erase");
-                System.out.println("press 5 for edit");
-                System.out.println("press 6 for assign tone");
-                System.out.println("press 7 for send b'card");
-                System.out.println("press 8 for options");
-                System.out.println("press 9 for speed dials");
-                System.out.println("press 10 for voice tags");
-                System.out.println("press 11 to return to previous menu");
-
-                number = input.nextInt();
-
-                if (number == 1) System.out.println("search");
-                else if (number == 2) System.out.println("service no");
-                else if (number == 3) System.out.println("add name");
-                else if (number == 4) System.out.println("erase");
-                else if (number == 5) System.out.println("edit");
-                else if (number == 6) System.out.println("Assign tone");
-                else if (number == 7) System.out.println("send d'board");
-                else if (number == 8) {
-                    System.out.println("options");
-                    System.out.println("press 1 for type of view");
-                    System.out.println("press 2 for memory status");
-
-                    number = input.nextInt();
-
-                    if (number == 1) {
-                        System.out.println("Type of view");
-                    } else if (number == 2){
-                        System.out.println("memory status");
-                    }
-                    else phone();
-                } else if (number == 9) System.out.println("speed dials");
-                else if (number == 10) System.out.println("voice tags");
-                else phone();
-
+                   phoneBook();
                 break;
 
-
             case 2:
-                System.out.println("press 1 for write messages");
-                System.out.println("press 2 for inbox");
-                System.out.println("press 3 for outbox");
-                System.out.println("press 4 for picture messages");
-                System.out.println("press 5 for templates");
-                System.out.println("press 6 for smileys");
-                System.out.println("press 7 for message settings");
-                System.out.println("press 8 for info services");
-                System.out.println("press 9 for voice mailbox number");
-                System.out.println("press 10 for service command editor");
-                System.out.println("press 11 to go back");
-
-                number = input.nextInt();
-
-                switch (number) {
-                    case 1:
-                        System.out.println("write messages");
-                        break;
-                    case 2:
-                        System.out.println("inbox");
-                        break;
-                    case 3:
-                        System.out.println("outbox");
-                        break;
-                    case 4:
-                        System.out.println("picture messages");
-                        break;
-                    case 5:
-                        System.out.println("templates");
-                        break;
-                    case 6:
-                        System.out.println("smileys");
-                        break;
-                    case 7:
-                        System.out.println("Message setting");
-                        System.out.println("Press 1 for set 1");
-                        System.out.println("press 2 for common");
-                        System.out.println("press 11 to go back");
-
-                        number = input.nextInt();
-
-                        if (number == 1) {
-                            System.out.println("press 1 for message centre number");
-                            System.out.println("press 2 for message sent as");
-                            System.out.println("press 3 for message validity");
-                            System.out.println("press 11 to go back");
-
-                            number = input.nextInt();
-
-                            if (number == 1) {
-                                System.out.println("centre number");
-                            } else if (number == 2) {
-                                System.out.println("message sent as");
-                            } else if(number == 3){
-                                System.out.println("message validity");
-                            }
-                            else phone();
-                        } else {
-                            System.out.println("press 1 for delivery reports");
-                            System.out.println("press 2 for reply via same centre");
-                            System.out.println("press 3 for character support");
-                            System.out.println("press 11 to go back");
-
-                            number = input.nextInt();
-
-                            if (number == 1) {
-                                System.out.println("delivery reports");
-                            } else if (number == 2) {
-                                System.out.println("reply via same centre");
-                            } else if(number == 3){
-                                System.out.println("character support");
-                            }
-                            else phone();
-
-                        }
-                        break;
-
-                    case 8:
-                        System.out.println("info services");
-                        break;
-                    case 9:
-                        System.out.println("voice mail box numbers");
-                        break;
-                    case 10:
-                        System.out.println("service command editor");
-                    case 11: phone();
-                        break;
-
-                }
+                   messages();
                 break;
 
             case 3:
@@ -179,6 +53,7 @@ public class Nokia {
                 System.out.println("press 6 for show call costs");
                 System.out.println("press 7 for call cost settings");
                 System.out.println("press 8 for prepaid credit");
+                System.out.println("press 9 to go back");
 
                 number = input.nextInt();
 
@@ -253,6 +128,9 @@ public class Nokia {
                         number = input.nextInt();
                         if (number == 11) phone();
                         break;
+
+                    case 9: phone();
+                    break;
                 }
                 break;
 
@@ -266,64 +144,39 @@ public class Nokia {
                 System.out.println("press 7 for warning and game tunes");
                 System.out.println("press 8 for vibrating alert");
                 System.out.println("press 9 for screen saver");
+                System.out.println("press 10 to go back");
 
                 number = input.nextInt();
 
                 switch (number) {
                     case 1:
                         System.out.println("ringing tones");
-                        System.out.println("press 11 to go back");
-                        number = input.nextInt();
-                        if (number == 11) phone();
                         break;
                     case 2:
                         System.out.println("ringing volumes");
-                        System.out.println("press 11 to go back");
-                        number = input.nextInt();
-                        if (number == 11) phone();
                         break;
                     case 3:
                         System.out.println("incoming call alerts");
-                        System.out.println("press 11 to go back");
-                        number = input.nextInt();
-                        if (number == 11) phone();
                         break;
                     case 4:
                         System.out.println("composer");
-                        System.out.println("press 11 to go back");
-                        number = input.nextInt();
-                        if (number == 11) phone();
                         break;
                     case 5:
                         System.out.println("message alert tone");
-                        System.out.println("press 11 to go back");
-                        number = input.nextInt();
-                        if (number == 11) phone();
                         break;
                     case 6:
                         System.out.println("keypad tones");
-                        System.out.println("press 11 to go back");
-                        number = input.nextInt();
-                        if (number == 11) phone();
                         break;
                     case 7:
                         System.out.println("warning and game tunes");
-                        System.out.println("press 11 to go back");
-                        number = input.nextInt();
-                        if (number == 11) phone();
                         break;
                     case 8:
                         System.out.println("vibrating alert");
-                        System.out.println("press 11 to go back");
-                        number = input.nextInt();
-                        if (number == 11) phone();
                         break;
                     case 9:
                         System.out.println("screen saver");
-                        System.out.println("press 11 to go back");
-                        number = input.nextInt();
-                        if (number == 11) phone();
                         break;
+                    case 10: phone();
                 }
                 break;
 
@@ -332,6 +185,7 @@ public class Nokia {
                 System.out.println("press 2 for phone settings");
                 System.out.println("press 3 for security settings");
                 System.out.println("press 4 for Restore factory settings");
+                System.out.println("press 5 to go back");
 
                 number = input.nextInt();
 
@@ -404,6 +258,8 @@ public class Nokia {
                         if (number == 11) phone();
                         break;
 
+                    case 5: phone();
+
                 }
 
                 break;
@@ -411,30 +267,18 @@ public class Nokia {
 
             case 7:
                 System.out.println("call divert");
-                System.out.println("press 11 to go back");
-                number = input.nextInt();
-                if (number == 11) phone();
                 break;
 
             case 8:
                 System.out.println("games");
-                System.out.println("press 11 to go back");
-                number = input.nextInt();
-                if (number == 11) phone();
                 break;
 
             case 9:
                 System.out.println("calculator");
-                System.out.println("press 11 to go back");
-                number = input.nextInt();
-                if (number == 11) phone();
                 break;
 
             case 10:
                 System.out.println("reminders");
-                System.out.println("press 11 to go back");
-                number = input.nextInt();
-                if (number == 11) phone();
                 break;
 
             case 11:
@@ -444,7 +288,7 @@ public class Nokia {
                 System.out.println("press 4 for stop watch");
                 System.out.println("press 5 for countdown timer");
                 System.out.println("press 6 for auto update of date and time");
-                System.out.println("press 11 to go back");
+                System.out.println("press 7 to go back");
 
                 number = input.nextInt();
 
@@ -460,22 +304,196 @@ public class Nokia {
 
             case 12:
                 System.out.println("profiles");
-                System.out.println("press 11 to go back");
-                number = input.nextInt();
-                if (number == 11) phone();
-
                 break;
 
             case 13:
                 System.out.println("sim services");
-                System.out.println("press 11 to go back");
-                number = input.nextInt();
-                if (number == 11) phone();
-
                 break;
 
         }//first switch statement
 
 
     }
-}
+
+    public static void phoneBook() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("press 1 for search");
+        System.out.println("press 2 for service no");
+        System.out.println("press 3 for add name");
+        System.out.println("press 4 for erase");
+        System.out.println("press 5 for edit");
+        System.out.println("press 6 for assign tone");
+        System.out.println("press 7 for send b'card");
+        System.out.println("press 8 for options");
+        System.out.println("press 9 for speed dials");
+        System.out.println("press 10 for voice tags");
+        System.out.println("press 11 to return to previous menu");
+
+        int number = input.nextInt();
+
+        if (number == 1) System.out.println("search");
+        else if (number == 2) System.out.println("service no");
+        else if (number == 3) System.out.println("add name");
+        else if (number == 4) System.out.println("erase");
+        else if (number == 5) System.out.println("edit");
+        else if (number == 6) System.out.println("Assign tone");
+        else if (number == 7) System.out.println("send d'board");
+        else if (number == 8) {
+            System.out.println("options");
+            System.out.println("press 1 for type of view");
+            System.out.println("press 2 for memory status");
+            System.out.println("press 3 to go back");
+
+            number = input.nextInt();
+
+            if (number == 1) {
+                System.out.println("Type of view");
+            } else if (number == 2){
+                System.out.println("memory status");
+            }
+            else phoneBook();
+        } else if (number == 9) System.out.println("speed dials");
+        else if (number == 10) System.out.println("voice tags");
+        else phone();
+    }
+
+    public static void messages(){
+        System.out.println("press 1 for write messages");
+        System.out.println("press 2 for inbox");
+        System.out.println("press 3 for outbox");
+        System.out.println("press 4 for picture messages");
+        System.out.println("press 5 for templates");
+        System.out.println("press 6 for smileys");
+        System.out.println("press 7 for message settings");
+        System.out.println("press 8 for info services");
+        System.out.println("press 9 for voice mailbox number");
+        System.out.println("press 10 for service command editor");
+        System.out.println("press 11 to go back");
+
+        Scanner input = new Scanner(System.in);
+        int number = input.nextInt();
+
+        switch (number) {
+            case 1:
+                System.out.println("write messages");
+                break;
+            case 2:
+                System.out.println("inbox");
+                break;
+            case 3:
+                System.out.println("outbox");
+                break;
+            case 4:
+                System.out.println("picture messages");
+                break;
+            case 5:
+                System.out.println("templates");
+                break;
+            case 6:
+                System.out.println("smileys");
+                break;
+            case 7:
+                System.out.println("Message setting");
+                System.out.println("Press 1 for set 1");
+                System.out.println("press 2 for common");
+                System.out.println("press 3 to go back");
+
+                number = input.nextInt();
+
+                if(number == 1) {
+                    System.out.println("press 1 for message centre number");
+                    System.out.println("press 2 for message sent as");
+                    System.out.println("press 3 for message validity");
+                    System.out.println("press 4 to go back");
+
+                    number = input.nextInt();
+
+                    if (number == 1) {
+                        System.out.println("centre number");
+                    } else if (number == 2) {
+                        System.out.println("message sent as");
+                    } else if(number == 3){
+                        System.out.println("message validity");
+                    }
+                    else messages();
+                }
+
+                else {
+                    System.out.println("press 1 for delivery reports");
+                    System.out.println("press 2 for reply via same centre");
+                    System.out.println("press 3 for character support");
+                    System.out.println("press 4 to go back");
+
+                    number = input.nextInt();
+
+                    if (number == 1) {
+                        System.out.println("delivery reports");
+                    } else if (number == 2) {
+                        System.out.println("reply via same centre");
+                    } else if(number == 3){
+                        System.out.println("character support");
+                    }
+                    else messages();
+
+                }
+                break;
+
+            case 8:
+                System.out.println("info services");
+                break;
+            case 9:
+                System.out.println("voice mail box numbers");
+                break;
+            case 10:
+                System.out.println("service command editor");
+            case 11: phone();
+                break;
+
+        }
+
+//        public static void messageSettings(){
+//            System.out.println("Message setting");
+//            System.out.println("Press 1 for set 1");
+//            System.out.println("press 2 for common");
+//            System.out.println("press 3 to go back");
+//
+//
+//            if(number == 1) {
+//                System.out.println("press 1 for message centre number");
+//                System.out.println("press 2 for message sent as");
+//                System.out.println("press 3 for message validity");
+//                System.out.println("press 4 to go back");
+//
+//                number = input.nextInt();
+//
+//                if (number == 1) {
+//                    System.out.println("centre number");
+//                } else if (number == 2) {
+//                    System.out.println("message sent as");
+//                } else if(number == 3){
+//                    System.out.println("message validity");
+//                }
+//                else messages();
+//            }
+//
+//            else {
+//                System.out.println("press 1 for delivery reports");
+//                System.out.println("press 2 for reply via same centre");
+//                System.out.println("press 3 for character support");
+//                System.out.println("press 4 to go back");
+//
+//                number = input.nextInt();
+//
+//                if (number == 1) {
+//                    System.out.println("delivery reports");
+//                } else if (number == 2) {
+//                    System.out.println("reply via same centre");
+//                } else if(number == 3){
+//                    System.out.println("character support");
+//                }
+//                else messages();
+//
+//            }
+//        }
+   }
+}// closing bracket for  class nokia

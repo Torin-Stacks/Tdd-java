@@ -7,7 +7,8 @@ public class Bike {
 
 
     public void ignition() {
-        if (isOn) isOn = true;
+        if (isOn == false) isOn = true;
+        else isOn = false;
 
     }
 
